@@ -4,3 +4,8 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
 }
+
+.btn.no-focus:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

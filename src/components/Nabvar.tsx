@@ -1,12 +1,15 @@
+import { useState } from "react";
+
 export const Nabvar = () => {
+  const [closeMenu, setCloseMenu] = useState(false);
   return (
-    <nav className="navbar navbar-expand-lg bg-light m-0">
+    <nav className="navbar navbar-expand-lg bg-light m-0 py-3">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img src="/images/logo.svg" alt="logo" />
-        </a>
+        <img src="/images/logo.svg" alt="logo" />
+
         <button
-          className="navbar-toggler"
+          onClick={() => setCloseMenu(!closeMenu)}
+          className="navbar-toggler border-white btn no-focus"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarText"
@@ -14,7 +17,11 @@ export const Nabvar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          {!closeMenu ? (
+            <img src="/images/icon-hamburger.svg" alt="icon-hamburger" />
+          ) : (
+            <img src="/images/icon-close.svg" alt="icon-hamburger" />
+          )}
         </button>
         <div className="collapse navbar-collapse " id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-center text-dark">
