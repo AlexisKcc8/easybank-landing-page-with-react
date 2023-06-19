@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./styles/variables/measures";
+@import "./styles/variables/colors";
 body {
-  background-color: aliceblue;
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
 }
@@ -8,4 +9,56 @@ body {
 .btn.no-focus:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+//? ------------- Nabvar -------------
+.my-nabvar {
+  min-height: $heightNabvar;
+  z-index: 500;
+}
+//? ------------- Hero -------------
+.hero {
+  padding-top: $heightNabvar;
+  .hero-imgs {
+    position: relative;
+
+    &__bg-mobile {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__phones {
+      width: 100%;
+
+      position: absolute;
+      top: -5rem;
+      left: 0;
+    }
+  }
+  .hero-info {
+    &__title {
+      font-size: 2.4rem;
+    }
+    &__description {
+      font-size: 0.95rem;
+      margin: 1rem 0;
+      color: $GrayishBlue;
+    }
+  }
+}
+// ******************* COMPONENTES *******************
+//? ------------- btn-invite -------------
+.btn-invite {
+  background: rgb(49, 211, 92);
+  background: linear-gradient(
+    90deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 92%
+  );
+  width: 50%;
+  padding: 1rem 0;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
 }

@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { ButtonInvite } from "./ButtonInvite";
 
 export const Nabvar = () => {
   const [closeMenu, setCloseMenu] = useState(false);
   return (
-    <nav className="navbar navbar-expand-lg bg-light m-0 py-3">
+    <nav className="my-nabvar navbar  navbar-expand-lg bg-light m-0 py-3  position-fixed top-0 start-0 w-100">
       <div className="container-fluid">
         <img src="/images/logo.svg" alt="logo" />
 
@@ -51,9 +52,9 @@ export const Nabvar = () => {
               </a>
             </li>
           </ul>
-          <button className="btn btn-success d-none d-md-block">
-            Requets Invite
-          </button>
+          <div className="d-none d-md-block">
+            <ButtonInvite />
+          </div>
         </div>
       </div>
     </nav>
