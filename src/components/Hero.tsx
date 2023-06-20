@@ -24,16 +24,6 @@ export const Hero = () => {
             more.
           </p>
           <ButtonInvite />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
         </footer>
       </article>
     </section>

@@ -46,6 +46,25 @@ body {
     }
   }
 }
+//? ------------- Services -------------
+.services {
+  background-color: $LightGrayishBlue;
+  .services-info-header {
+    padding: 1rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  &__title--main {
+    font-size: 2rem;
+  }
+  &__description {
+    font-size: 0.9rem;
+    color: $GrayishBlue;
+  }
+}
 // ******************* COMPONENTES *******************
 //? ------------- btn-invite -------------
 .btn-invite {

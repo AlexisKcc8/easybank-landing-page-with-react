@@ -1,5 +1,6 @@
 import { Hero } from "./components/Hero";
 import { Nabvar } from "./components/Nabvar";
+import { Services } from "./components/Services";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         </div>
       </div>
       <Hero />
+      <Services />
     </section>
   );
 }
