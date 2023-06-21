@@ -10,8 +10,8 @@ export const CardServices = (props: PropsCardService) => {
   return (
     <div className="service">
       <img src={service.urlImg} alt={`img-${service.title}`} />
-      <h4 className="services__title">{service.title}</h4>
-      <p className="services__description">{service.description}</p>
+      <h4 className="service__title">{service.title}</h4>
+      <p className="service__description">{service.description}</p>
     </div>
   );
 };

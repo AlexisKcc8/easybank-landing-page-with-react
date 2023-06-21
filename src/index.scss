@@ -54,18 +54,58 @@ body {
   }
 
   &__title {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-  }
-  &__title--main {
     font-size: 2rem;
+    font-weight: 400;
   }
   &__description {
     font-size: 0.9rem;
     color: $GrayishBlue;
   }
+  .service {
+    &__title {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 1rem 0;
+    }
+    &__description {
+      font-size: 0.9rem;
+      color: $GrayishBlue;
+    }
+  }
+}
+//? ------------- Articles -------------
+.articles {
+  // padding: 0 0.5rem;
+  background-color: $VeryLightGray;
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__title--main {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    font-weight: 400;
+  }
 }
 // ******************* COMPONENTES *******************
+.card {
+  border: none;
+  padding: 0 0 2rem 0;
+  .card-subtitle,
+  .card-text {
+    color: $GrayishBlue;
+  }
+
+  .card-subtitle {
+    font-size: 0.7rem;
+  }
+  .card-title {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  .card-text {
+    font-size: 0.88rem;
+  }
+}
 //? ------------- btn-invite -------------
 .btn-invite {
   background: rgb(49, 211, 92);
