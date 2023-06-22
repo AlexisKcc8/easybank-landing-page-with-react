@@ -86,6 +86,29 @@ body {
     font-weight: 400;
   }
 }
+//? ------------- Footer -------------
+.footer {
+  background-color: $DarkBlue;
+  .footer-logo-social-media {
+    &__container-social-media {
+      img {
+        margin: 0 0.5rem;
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+  }
+  .footer-items {
+    &__list {
+      list-style: none;
+    }
+  }
+  .footer-copyright {
+    &__text {
+      color: $GrayishBlue;
+    }
+  }
+}
 // ******************* COMPONENTES *******************
 .card {
   border: none;

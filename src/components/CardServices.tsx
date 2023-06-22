@@ -6,7 +6,7 @@ interface PropsCardService {
 
 export const CardServices = (props: PropsCardService) => {
   const { service } = props;
-  console.log(service);
+
   return (
     <div className="service">
       <img src={service.urlImg} alt={`img-${service.title}`} />

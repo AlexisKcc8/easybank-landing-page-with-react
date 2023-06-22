@@ -1,8 +1,8 @@
 import { Articles } from "./components/Articles";
+import { FooterPage } from "./components/FooterPage";
 import { Hero } from "./components/Hero";
 import { Nabvar } from "./components/Nabvar";
 import { Services } from "./components/Services";
-
 function App() {
   return (
     <section className="container-fluid p-0">
@@ -16,6 +16,7 @@ function App() {
       <Hero />
       <Services />
       <Articles />
+      <FooterPage />
     </section>
   );
 }
