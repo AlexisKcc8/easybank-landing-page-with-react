@@ -6,7 +6,7 @@ export const Nabvar = () => {
   const [closeMenu, setCloseMenu] = useState(false);
   return (
     <nav className="my-nabvar navbar  navbar-expand-lg bg-light m-0 py-3  position-fixed top-0 start-0 w-100">
-      <div className="container-fluid">
+      <div className="container-fluid container">
         <LogoEasyBank />
 
         <button
@@ -25,8 +25,9 @@ export const Nabvar = () => {
             <img src="/images/icon-close.svg" alt="icon-hamburger" />
           )}
         </button>
-        <div className="collapse navbar-collapse " id="navbarText">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-center text-dark">
+
+        <div className="collapse navbar-collapse" id="navbarText">
+          <ul className="navbar-nav me-auto  mb-2 mb-lg-0 text-center text-dark  w-100 d-lg-flex justify-content-lg-center">
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">
                 Home
@@ -53,7 +54,7 @@ export const Nabvar = () => {
               </a>
             </li>
           </ul>
-          <div className="d-none d-md-block">
+          <div className="d-none d-lg-block navbar-container-button">
             <ButtonInvite />
           </div>
         </div>
