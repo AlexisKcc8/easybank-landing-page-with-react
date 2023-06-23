@@ -25,23 +25,37 @@ body {
 //? ------------- Hero -------------
 .hero {
   padding-top: $heightNabvar;
-  .hero-imgs {
-    position: relative;
+  min-height: 90vh;
 
-    &__bg-mobile {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    &__phones {
-      width: 100%;
-
+  .hero-imgs-picture {
+    &__img-mobile {
       position: absolute;
-      top: -5rem;
+      top: -4.2rem;
       left: 0;
+      // background-color: blue;
     }
   }
+  .hero-imgs__phones {
+    position: absolute;
+    top: -7.2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 90%;
+  }
   .hero-info {
+    margin: 19rem 0 0 0;
+    padding: 0 0 6rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    @include querie-compu {
+      align-items: flex-start;
+      justify-content: center;
+    }
     &__title {
       font-size: 2.4rem;
     }
@@ -55,27 +69,39 @@ body {
 //? ------------- Services -------------
 .services {
   background-color: $LightGrayishBlue;
-  .services-info-header {
-    padding: 1rem;
-  }
-
-  &__title {
-    font-size: 2rem;
-    font-weight: 400;
-  }
-  &__description {
-    font-size: 0.9rem;
-    color: $GrayishBlue;
-  }
-  .service {
+  padding: 4.5rem 0;
+  .services-container-info {
     &__title {
-      font-size: 1.4rem;
+      font-size: 2rem;
       font-weight: 400;
-      margin: 1rem 0;
+      @include querie-compu {
+        font-size: 2.5rem;
+      }
     }
     &__description {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: $GrayishBlue;
+      @include querie-compu {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  .service {
+    &__title {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 1rem 0;
+      @include querie-compu {
+        font-size: 1.5rem;
+      }
+    }
+    &__description {
+      font-size: 0.8rem;
+      color: $GrayishBlue;
+      @include querie-compu {
+        font-size: 1.15rem;
+      }
     }
   }
 }
@@ -118,7 +144,11 @@ body {
 // ******************* COMPONENTES *******************
 .card {
   border: none;
+
   padding: 0 0 2rem 0;
+  @include querie-compu {
+    // margin: 0 0.5rem;
+  }
   .card-subtitle,
   .card-text {
     color: $GrayishBlue;
@@ -143,8 +173,8 @@ body {
     rgba(49, 211, 92, 1) 0%,
     rgba(43, 183, 218, 1) 92%
   );
-  width: 50%;
-  padding: 1rem 0;
+
+  padding: 0.7rem 0;
   border-radius: 5rem;
   border: none;
   font-size: 1.1rem;
