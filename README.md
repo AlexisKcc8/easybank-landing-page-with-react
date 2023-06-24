@@ -14,7 +14,7 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 ### Screenshot
 
 ![](/public/images/easybank-desktop.png)
-![](/public/images/bg-intro-mobile.svg)
+![](/public/images/easybank-mobile.png)
 
 ### Links
 
