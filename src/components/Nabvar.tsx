@@ -6,7 +6,7 @@ export const Nabvar = () => {
   const [closeMenu, setCloseMenu] = useState(false);
   return (
     <nav className="my-nabvar navbar  navbar-expand-lg bg-light position-fixed top-0 start-0 w-100  border m-0 p-0 border bg-danger">
-      <div className="container-fluid container  p-0">
+      <div className="container-fluid container px-3">
         <LogoEasyBank />
 
         <button
