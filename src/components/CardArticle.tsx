@@ -8,7 +8,7 @@ export const CardArticle = (props: PropsCardArticle) => {
   const { article } = props;
   const { title, autor, description, urlImg } = article;
   return (
-    <div className="card text-start mb-5 col-12 col-md-3 border ">
+    <div className="card text-start mb-5 mx-0   ">
       <img src={urlImg} className="card-img-top" alt="..." />
       <div className="card-body">
         <span className="card-subtitle">{autor}</span>

@@ -2,8 +2,8 @@ import { services } from "../myInformation";
 import { CardServices } from "./CardServices";
 export const Services = () => {
   return (
-    <section className="services ">
-      <article className="container">
+    <section className="services d-block position-relative">
+      <article className="container ">
         <div className="row  mx-0  ">
           <header className="services-container-info col-12 text-center text-md-start">
             <h3 className="services-container-info__title">

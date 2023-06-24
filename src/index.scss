@@ -5,6 +5,7 @@
 body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 .btn.no-focus:focus {
@@ -15,7 +16,7 @@ body {
 //? ------------- Nabvar -------------
 .my-nabvar {
   min-height: $heightNabvar;
-  z-index: 500;
+  z-index: 1000;
   .navbar-container-button {
     @include querie-compu {
       width: 12rem;
@@ -25,14 +26,26 @@ body {
 //? ------------- Hero -------------
 .hero {
   padding-top: $heightNabvar;
-  min-height: 90vh;
+  height: auto;
+  // overflow: hidden;
+
+  @include querie-compu {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .hero-imgs-picture {
     &__img-mobile {
       position: absolute;
       top: -4.2rem;
       left: 0;
-      // background-color: blue;
+      z-index: 700;
+      @include querie-compu {
+        top: -23rem;
+        left: 43rem;
+      }
     }
   }
   .hero-imgs__phones {
@@ -43,26 +56,44 @@ body {
     bottom: 0;
     margin: 0 auto;
     width: 90%;
+    z-index: 800;
+    @include querie-compu {
+      // display: none;
+      width: 50%;
+      top: -11rem;
+      left: 55rem;
+    }
   }
   .hero-info {
-    margin: 19rem 0 0 0;
+    margin-top: 19rem;
     padding: 0 0 6rem 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    text-align: center;
+
     @include querie-compu {
+      margin-top: 0;
+      height: 100%;
       align-items: flex-start;
       justify-content: center;
+      padding: 0;
     }
     &__title {
       font-size: 2.4rem;
+      @include querie-compu {
+        font-size: 5rem;
+        font-weight: 300;
+      }
     }
     &__description {
       font-size: 0.95rem;
       margin: 1rem 0;
       color: $GrayishBlue;
+      @include querie-compu {
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
     }
   }
 }
@@ -70,6 +101,7 @@ body {
 .services {
   background-color: $LightGrayishBlue;
   padding: 4.5rem 0;
+  z-index: 700;
   .services-container-info {
     &__title {
       font-size: 2rem;
@@ -79,7 +111,7 @@ body {
       }
     }
     &__description {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: $GrayishBlue;
       @include querie-compu {
         font-size: 1.15rem;
@@ -97,7 +129,7 @@ body {
       }
     }
     &__description {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: $GrayishBlue;
       @include querie-compu {
         font-size: 1.15rem;
@@ -136,33 +168,60 @@ body {
     }
   }
   .footer-copyright {
+    &__container-button {
+      width: 12rem;
+    }
     &__text {
       color: $GrayishBlue;
+      font-size: 0.9rem;
+      @include querie-compu {
+        font-size: 1.1rem;
+      }
     }
   }
 }
 // ******************* COMPONENTES *******************
 .card {
   border: none;
-
-  padding: 0 0 2rem 0;
+  padding: 0 0 3rem 0;
   @include querie-compu {
-    // margin: 0 0.5rem;
-  }
-  .card-subtitle,
-  .card-text {
-    color: $GrayishBlue;
-  }
+    width: 20rem;
+    padding: 0 0 1rem 0;
 
-  .card-subtitle {
-    font-size: 0.7rem;
+    display: flex;
   }
-  .card-title {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
+  .card-img-top {
+    @include querie-compu {
+      height: 50%;
+    }
   }
-  .card-text {
-    font-size: 0.88rem;
+  .card-body {
+    padding: 1.5rem;
+    @include querie-compu {
+      padding: 1.7rem;
+    }
+
+    .card-subtitle,
+    .card-text {
+      color: $GrayishBlue;
+    }
+
+    .card-subtitle {
+      font-size: 0.8rem;
+    }
+    .card-title {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      @include querie-compu {
+        font-size: 1.25rem;
+      }
+    }
+    .card-text {
+      font-size: 0.8rem;
+      @include querie-compu {
+        font-size: 1rem;
+      }
+    }
   }
 }
 //? ------------- btn-invite -------------
