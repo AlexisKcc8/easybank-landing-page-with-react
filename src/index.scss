@@ -6,6 +6,7 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .btn.no-focus:focus {
@@ -20,6 +21,39 @@ body {
   .navbar-container-button {
     @include querie-compu {
       width: 12rem;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      padding: 0 8rem;
+      @include querie-compu {
+        padding: 0;
+      }
+      .nav-link {
+        // min-height: 5rem;
+
+        @include querie-compu {
+          line-height: 5rem;
+        }
+
+        transition: all 0.3s ease-in-out;
+
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 5px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $LimeGreen;
+          opacity: 0;
+        }
+        &:hover::after {
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+        }
+      }
     }
   }
 }
@@ -155,16 +189,23 @@ body {
   background-color: $DarkBlue;
   .footer-logo-social-media {
     &__container-social-media {
-      img {
+      .icon-social-media {
+        fill: $White;
         margin: 0 0.5rem;
-        width: 1.8rem;
-        height: 1.8rem;
+        &:hover {
+          fill: $LimeGreen;
+          cursor: pointer;
+        }
       }
     }
   }
   .footer-items {
     &__list {
       list-style: none;
+      .footer-items__item:hover {
+        cursor: pointer;
+        color: $LimeGreen;
+      }
     }
   }
   .footer-copyright {
@@ -212,6 +253,10 @@ body {
     .card-title {
       font-size: 1.1rem;
       margin: 0.5rem 0;
+      &:hover {
+        color: $BrightCyan;
+        cursor: pointer;
+      }
       @include querie-compu {
         font-size: 1.25rem;
       }
@@ -226,18 +271,23 @@ body {
 }
 //? ------------- btn-invite -------------
 .btn-invite {
-  background: rgb(49, 211, 92);
   background: linear-gradient(
     90deg,
     rgba(49, 211, 92, 1) 0%,
     rgba(43, 183, 218, 1) 92%
   );
-
   padding: 0.7rem 0;
   border-radius: 5rem;
   border: none;
   font-size: 1.1rem;
   font-weight: 700;
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgb(147, 245, 173) 0%,
+      rgba(163, 222, 236, 0.612) 92%
+    );
+  }
   @include querie-compu {
     width: 100%;
   }

@@ -10,3 +10,6 @@ export interface typeArticles {
   title: string;
   description: string;
 }
+export interface PropsIcon {
+  className: string;
+}

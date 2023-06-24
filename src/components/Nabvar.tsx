@@ -5,8 +5,8 @@ import { LogoEasyBank } from "./LogoEasyBank";
 export const Nabvar = () => {
   const [closeMenu, setCloseMenu] = useState(false);
   return (
-    <nav className="my-nabvar navbar  navbar-expand-lg bg-light m-0 py-3  position-fixed top-0 start-0 w-100">
-      <div className="container-fluid container">
+    <nav className="my-nabvar navbar  navbar-expand-lg bg-light position-fixed top-0 start-0 w-100  border m-0 p-0 border bg-danger">
+      <div className="container-fluid container  p-0">
         <LogoEasyBank />
 
         <button

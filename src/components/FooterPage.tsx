@@ -1,5 +1,10 @@
 import { ButtonInvite } from "./ButtonInvite";
+import { IconFace } from "../svgs/IconFace";
 import { LogoEasyBank } from "./LogoEasyBank";
+import { IconYoutube } from "../svgs/IconYoutube";
+import { IconTwitter } from "../svgs/IconTwitter";
+import { IconPinterest } from "../svgs/IconPinterest";
+import { IconInstagram } from "../svgs/IconInstagram";
 
 export const FooterPage = () => {
   return (
@@ -9,11 +14,11 @@ export const FooterPage = () => {
           <LogoEasyBank colorText="#fff" />
         </div>
         <div className="footer-logo-social-media__container-social-media">
-          <img src="/images/icon-facebook.svg" alt="icon-facebook" />
-          <img src="/images/icon-youtube.svg" alt="icon-youtube" />
-          <img src="/images/icon-twitter.svg" alt="icon-twitter" />
-          <img src="/images/icon-pinterest.svg" alt="icon-pinterest" />
-          <img src="/images/icon-instagram.svg" alt="icon-instagram" />
+          <IconFace className="icon-social-media" />
+          <IconYoutube className="icon-social-media" />
+          <IconTwitter className="icon-social-media" />
+          <IconPinterest className="icon-social-media" />
+          <IconInstagram className="icon-social-media" />
         </div>
       </section>
 
